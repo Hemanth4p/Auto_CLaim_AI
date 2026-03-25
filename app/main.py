@@ -1,10 +1,21 @@
 from fastapi import FastAPI
 from app.api import upload
+from app.api import vehicle
 
-app = FastAPI()
+app = FastAPI(
+    title="AutoClaim AI",
+    description="Intelligent Vehicle Insurance Claim Engine",
+    version="1.0.0"
+)
 
 app.include_router(upload.router, prefix="/upload", tags=["Upload"])
+app.include_router(vehicle.router, prefix="/vehicle", tags=["Vehicle"])
 
 @app.get("/")
 def home():
-    return {"message": "Server is running"}
+    return {
+        "status": "running",
+        "project": "AutoClaim AI",
+        "developer": "Hemanth4p",
+        "layers_complete": ["upload", "fraud_detection", "vehicle_identification"]
+    }

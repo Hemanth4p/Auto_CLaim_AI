@@ -1803,4 +1803,4 @@ def check_coverage(pdf_path: str, damages: list) -> dict:
         "covered_count": len(covered_items),
         "excluded_count": len(excluded_items),
         "coverage_details": results
-    }
+    }git

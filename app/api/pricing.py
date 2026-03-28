@@ -16,6 +16,7 @@ class DamageItem(BaseModel):
     damage_type: str
     severity: str
     confidence: float
+    cause: str = "accident"
 
 
 class PricingRequest(BaseModel):

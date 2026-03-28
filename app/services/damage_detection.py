@@ -12,18 +12,21 @@ def detect_damage(image_paths: List[str]) -> dict:
         {
             "part": "front_bumper",
             "damage_type": "dent",
+            "cause": "accident",
             "severity": "high",
             "confidence": 88.5
         },
         {
             "part": "left_headlight",
             "damage_type": "shatter",
+            "cause": "accident",
             "severity": "high",
             "confidence": 92.1
         },
         {
             "part": "door_panel",
             "damage_type": "scratch",
+            "cause": "accident",
             "severity": "low",
             "confidence": 76.3
         }

@@ -15,7 +15,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 @router.post("/")
 async def upload_images(
     files: List[UploadFile] = File(...),
-    incident_date: str = "2026-03-20"
+    incident_date: str = "2026-04-03"
 ):
     claim_id = str(uuid.uuid4())[:8].upper()
     results = []

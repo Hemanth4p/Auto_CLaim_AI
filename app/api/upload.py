@@ -28,7 +28,7 @@ async def upload_images(
             f.write(contents)
 
         exif = extract_exif(file_path)
-        fraud, reason = check_fraud(exif, incident_date)
+        fraud, reason = check_fraud(exif, incident_date, test_mode=True)
 
         results.append({
             "file": file.filename,

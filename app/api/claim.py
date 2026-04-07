@@ -158,5 +158,10 @@ async def process_claim(
         "deductible": 1000,
         "shap_explanations": shap_result["explanations"],
         "pdf_report": pdf_path,
-        "coverage_details": coverage_result["coverage_details"]
+        "coverage_details": coverage_result["coverage_details"],
+        
+         # 🔥 ADD THIS BLOCK (IMPORTANT)
+        "debug_images": [
+              f"debug_outputs/{os.path.basename(p)}" for p in saved_paths
+     ]
     }

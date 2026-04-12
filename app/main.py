@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from app.api import upload
-from app.api import vehicle
 from app.api import damage
 from app.api import pricing
 from app.api import policy
@@ -14,7 +13,6 @@ app = FastAPI(
 )
 
 app.include_router(upload.router, prefix="/upload", tags=["Upload"])
-app.include_router(vehicle.router, prefix="/vehicle", tags=["Vehicle"])
 app.include_router(damage.router, prefix="/damage", tags=["Damage"])
 app.include_router(pricing.router, prefix="/pricing", tags=["Pricing"])
 app.include_router(policy.router, prefix="/policy", tags=["Policy"])
